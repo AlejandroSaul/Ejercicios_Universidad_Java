@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Seccion_6 {
-	public void clase56() {
+	public void Clase56() {
 		/*
 		 * Se solicita un programa para generear un valor de id(Identificador) unico
 		 * para cada persona
@@ -56,7 +56,7 @@ public class Seccion_6 {
 				
 	}
 	
-	public void clase69() {
+	public void Clase69() {
 		/*Crea un programa para validar el usuario y password proporcinados por el
 		 * usuario
 		 * crea 2 constantes con los Valores correctos y posteiomente compara

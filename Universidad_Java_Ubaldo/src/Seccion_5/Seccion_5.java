@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Seccion_5 {
 	@SuppressWarnings("resource")
-	public void clase48() {
+	public void Clase48() {
 		/**/
 		Scanner escan = new Scanner(System.in);
 		System.out.println("Digite el nombre de la receta");
