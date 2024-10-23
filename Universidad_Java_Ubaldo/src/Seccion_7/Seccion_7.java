@@ -33,4 +33,43 @@ public class Seccion_7 {
 			break;
 		}
 	}
+	
+	public void Clase87() {
+		Scanner escan = new Scanner(System.in);
+		
+		System.out.println("*** Sistema de Reserva de Hotel");
+		System.out.print("Nombre del Cliente: ");
+		String nombre = escan.nextLine();
+		escan = new Scanner(System.in);
+		System.out.print("Dias de estadia: ");
+		int diasEstadia = escan.nextInt();
+		System.out.print("Con vista al mar (true/false)? ");
+		boolean vistaMar = escan.nextBoolean();
+		
+		double conVistaMar = 190.50;
+		double sinVistaMar = 150.50;
+		
+		double costoTotal = vistaMar ? conVistaMar * diasEstadia : sinVistaMar * diasEstadia;
+		
+		
+		System.out.println("-----Detalles de la resevacion-------");
+		System.out.println(String.format("Cliente : %S", nombre));
+		System.out.println(String.format("Dias de estadia %d", diasEstadia));
+		System.out.println(String.format("Costo Total $ %f", costoTotal));
+		String mensaje = vistaMar ? "Habitacion con vista al mar: Si :)"  : "Habitacion sin vista al mar :(";
+
+		System.out.println(mensaje);
+		
+	}
+	
+	public void Clase89() {
+		Scanner escan = new Scanner(System.in);
+		System.out.println("Digite un numero");
+		int primerNumero = escan.nextInt();
+		System.out.println("Digite otro numero");
+		int segundoNumero = escan.nextInt();
+		
+		int mayorNumero = primerNumero>segundoNumero ? primerNumero : segundoNumero;
+		System.out.println(String.format("el mayor numero es %d", mayorNumero));
+	}
 }
