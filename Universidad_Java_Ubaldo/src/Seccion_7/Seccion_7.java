@@ -33,10 +33,10 @@ public class Seccion_7 {
 			break;
 		}
 	}
-	
+
 	public void Clase87() {
 		Scanner escan = new Scanner(System.in);
-		
+
 		System.out.println("*** Sistema de Reserva de Hotel");
 		System.out.print("Nombre del Cliente: ");
 		String nombre = escan.nextLine();
@@ -45,31 +45,55 @@ public class Seccion_7 {
 		int diasEstadia = escan.nextInt();
 		System.out.print("Con vista al mar (true/false)? ");
 		boolean vistaMar = escan.nextBoolean();
-		
+
 		double conVistaMar = 190.50;
 		double sinVistaMar = 150.50;
-		
+
 		double costoTotal = vistaMar ? conVistaMar * diasEstadia : sinVistaMar * diasEstadia;
-		
-		
+
 		System.out.println("-----Detalles de la resevacion-------");
 		System.out.println(String.format("Cliente : %S", nombre));
 		System.out.println(String.format("Dias de estadia %d", diasEstadia));
 		System.out.println(String.format("Costo Total $ %f", costoTotal));
-		String mensaje = vistaMar ? "Habitacion con vista al mar: Si :)"  : "Habitacion sin vista al mar :(";
+		String mensaje = vistaMar ? "Habitacion con vista al mar: Si :)" : "Habitacion sin vista al mar :(";
 
 		System.out.println(mensaje);
-		
+
 	}
-	
+
 	public void Clase89() {
 		Scanner escan = new Scanner(System.in);
 		System.out.println("Digite un numero");
 		int primerNumero = escan.nextInt();
 		System.out.println("Digite otro numero");
 		int segundoNumero = escan.nextInt();
-		
-		int mayorNumero = primerNumero>segundoNumero ? primerNumero : segundoNumero;
+
+		int mayorNumero = primerNumero > segundoNumero ? primerNumero : segundoNumero;
 		System.out.println(String.format("el mayor numero es %d", mayorNumero));
+	}
+
+	public void Clase91() {
+		System.out.println("Seleccione un numero del 1 al 12");
+		Scanner escn = new Scanner(System.in);
+		try {
+			int estacion = escn.nextInt();
+			switch (estacion) {
+			case 1,2,12:
+				System.out.println("Es Invierno");
+			break;
+			case 3,4,5:
+				System.out.println("Es primavera");
+			break;
+			case 6,7,8:
+				System.out.println("Es verano");
+			break;
+			case 9,10,11:
+				System.out.println("Es otoño");
+			break;
+			}
+
+		} catch (Exception e) {
+
+		}
 	}
 }
