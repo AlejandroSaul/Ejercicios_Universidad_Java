@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Seccion_7 seccion = new Seccion_7();
-		seccion.Clase91();
+		seccion.Clase101();
 	}
 
 }
