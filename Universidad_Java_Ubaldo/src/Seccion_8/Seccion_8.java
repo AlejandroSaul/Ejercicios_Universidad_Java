@@ -57,4 +57,63 @@ public class Seccion_8 {
 		}
 
 	}
+
+	public void Clase117() {
+		System.out.println("*** Calculadora en Java ***");
+		System.out.println("Operacion que puedes relizar:");
+		System.out.println("1. Suma");
+		System.out.println("2. Resta");
+		System.out.println("3. Multiplicacion");
+		System.out.println("4. Division");
+		System.out.println("5. Salir");
+		System.out.println("Escoja una opcion:");
+		Scanner escan = new Scanner(System.in);
+		int eleccin = escan.nextInt();
+		double numero1;
+		double numero2;
+		double resultado;
+
+		switch (eleccin) {
+		case 1:
+			System.out.println("Dame el numero 1");
+			numero1 = escan.nextDouble();
+			System.out.println("Dame el numero 2");
+			numero2 = escan.nextDouble();
+			resultado = numero1 + numero2;
+			break;
+		case 2:
+			System.out.println("Dame el numero 1");
+			numero1 = escan.nextDouble();
+			System.out.println("Dame el numero 2");
+			numero2 = escan.nextDouble();
+			resultado = numero1 + numero2;
+			break;
+		case 3:
+			System.out.println("Dame el numero 1");
+			numero1 = escan.nextDouble();
+			System.out.println("Dame el numero 2");
+			numero2 = escan.nextDouble();
+			resultado = numero1 + numero2;
+			break;
+		case 4:
+			System.out.println("Dame el numero 1");
+			numero1 = escan.nextDouble();
+			System.out.println("Dame el numero 2");
+			numero2 = escan.nextDouble();
+			resultado = numero1 + numero2;
+			break;
+		case 5:
+			System.out.println("Dame el numero 1");
+			numero1 = escan.nextDouble();
+			System.out.println("Dame el numero 2");
+			numero2 = escan.nextDouble();
+			resultado = numero1 + numero2;
+			break;
+		default:
+			System.out.println("No e suna opcion");
+			resultado=0;
+			break;
+		}
+		System.out.println(String.format("El resultado es : %.2f", resultado));
+	}
 }
