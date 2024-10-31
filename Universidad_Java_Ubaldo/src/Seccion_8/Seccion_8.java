@@ -116,4 +116,28 @@ public class Seccion_8 {
 		}
 		System.out.println(String.format("El resultado es : %.2f", resultado));
 	}
+	
+	public void Clase119() {
+		
+		Scanner escan = new Scanner(System.in);
+		String pass;
+		boolean bandera = true;
+		do {
+			try{
+				System.out.println("Digite una contraseña");
+				pass = escan.nextLine();
+				if(pass.length()>6) {
+					System.out.println("Password valido");
+					bandera = false;
+				}else {
+					System.out.println("Contraseña demasiada pequeña intente nuevamente");
+				}
+			}catch(Exception e) {
+				System.out.println("Error : "+ e);
+			}
+			
+		}while(bandera);
+		
+		}
+
 }
