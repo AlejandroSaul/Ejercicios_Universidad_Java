@@ -1,5 +1,6 @@
 package Seccion_8;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Seccion_8 {
@@ -139,5 +140,30 @@ public class Seccion_8 {
 		}while(bandera);
 		
 		}
+	
+	public void Clase121() {
+		Random random= new Random();
+		int numero = random.nextInt(1,50);
+		int adivina;
+		Scanner escan = new Scanner(System.in);
+		for(int i =1;i<10;i++) {
+			System.out.println("Digite un numero");
+			adivina = escan.nextInt();
+			if(i==10) {
+				System.out.println("Se terminaron los intentos");
+				break;
+			}
+			
+			if(adivina==numero) {
+				System.out.println("Felicidades, acertó");
+				System.out.println(String.format("El numero de intentos fue : %d", i));
+				break;
+			} else if(adivina< numero) {
+				System.out.println("El numero que eligio es menor al numero a adivinar");
+			} else if(adivina > numero) {
+				System.out.println("El numero que eligio es mayor al numero a adivinar");
+			}
+		}
+	}
 
 }
