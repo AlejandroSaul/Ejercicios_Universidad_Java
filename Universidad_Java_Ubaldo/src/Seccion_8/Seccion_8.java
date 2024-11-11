@@ -1,5 +1,6 @@
 package Seccion_8;
 
+import java.util.Iterator;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -112,58 +113,83 @@ public class Seccion_8 {
 			break;
 		default:
 			System.out.println("No e suna opcion");
-			resultado=0;
+			resultado = 0;
 			break;
 		}
 		System.out.println(String.format("El resultado es : %.2f", resultado));
 	}
-	
+
 	public void Clase119() {
-		
+
 		Scanner escan = new Scanner(System.in);
 		String pass;
 		boolean bandera = true;
 		do {
-			try{
+			try {
 				System.out.println("Digite una contraseña");
 				pass = escan.nextLine();
-				if(pass.length()>6) {
+				if (pass.length() > 6) {
 					System.out.println("Password valido");
 					bandera = false;
-				}else {
+				} else {
 					System.out.println("Contraseña demasiada pequeña intente nuevamente");
 				}
-			}catch(Exception e) {
-				System.out.println("Error : "+ e);
+			} catch (Exception e) {
+				System.out.println("Error : " + e);
 			}
-			
-		}while(bandera);
-		
-		}
-	
+
+		} while (bandera);
+
+	}
+
 	public void Clase121() {
-		Random random= new Random();
-		int numero = random.nextInt(1,50);
+		Random random = new Random();
+		int numero = random.nextInt(1, 50);
 		int adivina;
 		Scanner escan = new Scanner(System.in);
-		for(int i =1;i<10;i++) {
+		for (int i = 1; i < 10; i++) {
 			System.out.println("Digite un numero");
 			adivina = escan.nextInt();
-			if(i==10) {
+			if (i == 10) {
 				System.out.println("Se terminaron los intentos");
 				break;
 			}
-			
-			if(adivina==numero) {
+
+			if (adivina == numero) {
 				System.out.println("Felicidades, acertó");
 				System.out.println(String.format("El numero de intentos fue : %d", i));
 				break;
-			} else if(adivina< numero) {
+			} else if (adivina < numero) {
 				System.out.println("El numero que eligio es menor al numero a adivinar");
-			} else if(adivina > numero) {
+			} else if (adivina > numero) {
 				System.out.println("El numero que eligio es mayor al numero a adivinar");
 			}
 		}
+	}
+
+	public void Clase123() {
+		char caracter1 = ' ';
+		char caracter2 = '*';
+
+		Scanner escaner = new Scanner(System.in);
+		System.out.println("Digite el numero de filas");
+		int numeroFilas = escaner.nextInt();
+
+		int numeroEspaciosInicial = numeroFilas - 1;
+		int asteriscos = 1;
+
+		for (int i = 0; i < numeroFilas; i++) {
+			for (int j = 0; j < numeroEspaciosInicial; j++) {
+				System.out.print(caracter1);
+			}
+			numeroEspaciosInicial -= 1;
+			for (int j = 0; j < asteriscos; j++) {
+				System.out.print(caracter2);
+			}
+			asteriscos += 2;
+			System.out.println();
+		}
+
 	}
 
 }
