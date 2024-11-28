@@ -12,6 +12,14 @@ public class Snack {
 		this.precio = precio;
 		this.idSnack = ++contadorSacks;
 	}
+	
+	
+
+	public int getIdSnack() {
+		return idSnack;
+	}
+
+
 
 	public String getNombre() {
 		return nombre;
