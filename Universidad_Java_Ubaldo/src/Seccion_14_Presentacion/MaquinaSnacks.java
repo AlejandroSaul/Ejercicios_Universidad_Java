@@ -1,20 +1,30 @@
-package Seccion_13_Maquina_de_Snacks;
+package Seccion_14_Presentacion;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import Seccion_14_dominio.Snack;
+import Seccion_14_servicio.IServicioSnacks;
+import Seccion_14_servicio.ServicioSnacks;
+
+
+
 public class MaquinaSnacks {
 	
-	private static List<Snack> carroCompras = new ArrayList<Snack>();
+public static void main(String[] args) {
+maquinaSnacks();
+}
+private static List<Snack> carroCompras = new ArrayList<Snack>();
 	
 	
 	
-	public static void maquinaSnacks(ServicioSnacks snacks) {
+	public static void maquinaSnacks() {
+		IServicioSnacks snacks = new ServicioSnacks();
 		mostrarMenu(snacks);
 	}
 	
-	private static void mostrarMenu(ServicioSnacks snacks) {
+	private static void mostrarMenu(IServicioSnacks snacks) {
 		
 		System.out.println("*** Maquina de Sancks ***");
 		System.out.println("--- Sancks en el Inventrio ---");
@@ -23,7 +33,7 @@ public class MaquinaSnacks {
 		
 	}
 	
-	private static void ejecutarOpciones(ServicioSnacks snacks) {
+	private static void ejecutarOpciones(IServicioSnacks snacks) {
 		boolean bandera = true;
 		int opcion = 0;
 		Scanner escaner = new Scanner(System.in);
@@ -92,7 +102,7 @@ public class MaquinaSnacks {
 		System.out.println();
 	}
 	
-	private static List<Snack> agregarSnack(ServicioSnacks snacks) {
+	private static List<Snack> agregarSnack(IServicioSnacks snacks) {
 		Scanner escan = new Scanner(System.in);
 		boolean bandera = true;
 		while(bandera) {
