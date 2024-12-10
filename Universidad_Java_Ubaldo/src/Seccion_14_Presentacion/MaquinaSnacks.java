@@ -1,5 +1,8 @@
 package Seccion_14_Presentacion;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -92,14 +95,30 @@ private static List<Snack> carroCompras = new ArrayList<Snack>();
 	}
 	
 	private static void mostarTicket() {
+		
 		double total = 0;
-		System.out.println("*** Ticket de Venta ***");
-		for(Snack snk : carroCompras) {
-			System.out.println("-"+snk.getNombre()+" - $"+snk.getPrecio());
-			total += snk.getPrecio();
+
+		try {
+			String ticket = "Ticket.txt";
+			File archivo = new File(ticket);
+			if(archivo.exists()) {
+				archivo.delete();				
+			}
+			FileWriter escribir = new FileWriter(archivo,true);
+						
+			escribir.write("*** Ticket de Venta ***\n");
+			for(Snack snk : carroCompras) {
+				escribir.write("-"+snk.getNombre()+" $"+snk.getPrecio());
+				total += snk.getPrecio();
+				escribir.write("\n");				
+			}
+			escribir.write(String.format("Total -> $%.2f", total));
+			escribir.close();
 		}
-		System.out.println(String.format("Total -> $%.2f", total));
-		System.out.println();
+		catch(Exception e) {
+			System.out.println("Error: "+e);
+		}
+		
 	}
 	
 	private static List<Snack> agregarSnack(IServicioSnacks snacks) {
